@@ -26,7 +26,7 @@ D_radical=((b*b)-(4*a*c));
 cout<<"\nDiscriminante : ";cout<<D_radical;
 }
  if(ecuacion(a, b, c)==0)
-  cout<<"La ecuacion no tiene solucion. ";
+  cout<<"\nLa ecuacion no tiene solucion. ";
  if(ecuacion(a,b,c)!=0)
  {
 	n1=(-b+sqrt(D_radical));
