@@ -1,0 +1,82 @@
+#include<stdio.h>
+#include<math.h>
+#include<iostream>
+float D_radical ;
+    float ecuacion (float a, float b, float c)
+    {
+	D_radical=((b*b)-(4*a*c));//el resultado de los numeros dentro de la raiz
+	if(D_radical<=0)return 0;// si el resultado es menor que 0 se termina el proceso
+	else return D_radical; //el resultado es almacenado el D_radical
+    }
+using namespace std;
+ main(){
+float a=0, b=0, c=0, n1,n2,n3,solucion1,solucion2;//defino cada varible
+int rep,r=1;//defino cada varible
+cout<<" \t \t \n";
+cout<<"Ecuacion tipo ax+bx+c=0 \n\n";
+while (r==1){//inicio del ciclo while
+cout<<"Valor de a : ";
+cin>>a;
+cout<<"Valor de b : ";
+cin>>b;
+cout<<"Valor de c : ";
+cin>>c;
+{
+D_radical=((b*b)-(4*a*c));
+cout<<"\nDiscriminante : ";cout<<D_radical;
+}
+ if(ecuacion(a, b, c)==0)
+  cout<<"La ecuacion no tiene solucion. ";
+ if(ecuacion(a,b,c)!=0)
+ {
+	n1=(-b+sqrt(D_radical));
+	n2=(-b-sqrt(D_radical));
+	n3=2*a;
+	solucion1=n1/n3;
+	solucion2=n2/n3;
+	cout<<"\nLa primera solucion es : X1=";cout<<solucion1;
+	cout<<"\nLa segunda solucion es : X2=";cout<<solucion2;
+        }
+    cout<<"\n\nDeseas obtener el vertice? si=1, no=2 ";
+    cin>>rep;
+    switch(rep){
+     case 1: r==3;
+     break;
+     case 2: return 0;
+     break;
+    }
+while (r==3){//inicio del ciclo while
+cout<<"Valor de a : ";
+cin>>a;
+cout<<"Valor de b : ";
+cin>>b;
+cout<<"Valor de c : ";
+cin>>c;
+  }
+  {
+float n4,n5,n6,x,y;
+int rep,r=3;
+    {  
+	 n4=(-b);
+     n5=(2*a);
+     x=n4/n5;
+     cout<<"\nLa primera solucion es : X=";cout<<x;
+     n6=a*x*x+b*x+c;
+     y=n6;
+     cout<<"\nLa primera solucion es : y=";cout<<y;
+     }
+   
+    cout<<"\n\nVolver a calcular otros 2 numeros? si=1, no=2: ";
+   cin>>rep;
+  switch(rep){
+   case 1: r==1;
+   break;
+   case 2: return 0;
+   break;
+   default:
+     return 0;
+			}
+        }
+     cout<<"  \n";
+}
+}
