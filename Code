@@ -10,7 +10,7 @@ using namespace std;
  main(){
 float a=0, b=0, c=0, n1,n2,n3,solucion1,solucion2;//defino cada varible
 int rep,r=1;//defino cada varible
-cout<<" \t \t \n";
+cout<<" \t \tCreado por Zair y Mario \n";//Mario scripter y Zair fixer
 cout<<"Ecuacion tipo ax+bx+c=0 \n\n";
 while (r==1){//inicio del ciclo while
 cout<<"Valor de a : ";
