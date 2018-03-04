@@ -1,30 +1,40 @@
 #include<stdio.h>
 #include<math.h>
 #include<iostream>
+
 float D_radical ;
     float ecuacion (float a, float b, float c)
     {
-	D_radical=((b*b)-(4*a*c));//el resultado de los numeros dentro de la raiz
+	D_radical=((b*b)-(4*a*c));
     }
+
 using namespace std;
- main(){
-float a=0, b=0, c=0, n1,n2,n3,solucion1,solucion2;//defino cada varible
+main()
+ {
+ 	
+float a=0, b=0, c=0, n1,n2,n3,solucion1,solucion2;
 int rep,r=1;//defino cada varible
-cout<<" \t \tCreado por Zair y Mario \n";//Mario scripter y Zair fixer
+
+cout<<" \t \t \t \t \t \t Creado por Zair y Mario \n";
+cout<<"Ingresar solo valores numericos\n";
 cout<<"Ecuacion tipo ax+bx+c=0 \n\n";
-while (r==1){//inicio del ciclo while
-cout<<"Valor de a : ";
-cin>>a;
-cout<<"Valor de b : ";
-cin>>b;
-cout<<"Valor de c : ";
-cin>>c;
+
+	while (r==1){
+		cout<<"Valor de a : ";
+		cin>>a;
+		cout<<"Valor de b : ";
+		cin>>b;
+		cout<<"Valor de c : ";
+		cin>>c;
 
 D_radical=((b*b)-(4*a*c));
 cout<<"\nDiscriminante : ";cout<<D_radical;
 
- if(ecuacion(a, b, c)<0){	
+ if(ecuacion(a, b, c)<0)
+ {
+ 	
   cout<<"\nLa ecuacion no tiene solucion. ";
+ 
  }
   
  if(ecuacion(a,b,c)>=0)
@@ -34,34 +44,63 @@ cout<<"\nDiscriminante : ";cout<<D_radical;
 	n3=2*a;
 	solucion1=n1/n3;
 	solucion2=n2/n3;
+	
 	cout<<"\nLa primera solucion es : X1=";cout<<solucion1;
 	cout<<"\nLa segunda solucion es : X2=";cout<<solucion2;
         
     cout<<"\n\nDeseas obtener el vertice? si=1, no=2 ";
     cin>>rep;
-    switch(rep){
-     case 1:
-	 	 float n4,n5,n6,x,y;
-	     n4=(-b);
-	     n5=(2*a);
-	     x=n4/n5;
-	     cout<<"\nLa primera solucion es : X=";cout<<x;
-	     n6=a*x*x+b*x+c;
-	     y=n6;
-	     cout<<"\nLa primera solucion es : y=";cout<<y;	
-     break;
-     case 2: return 0;
-     break;
-    }
+    
+	switch(rep){
+     	
+		 case 1:
+	 	 	float n4,n5,n6,x,y;
+	     	n4=(-b);
+	     	n5=(2*a);
+	     	x=n4/n5;
+	     	cout<<"\nLa primera solucion es : X=";cout<<x;
+	     	n6=a*x*x+b*x+c;
+	     	y=n6;
+	     	cout<<"\nLa primera solucion es : y=";cout<<y;	
+     		break;
+     
+	 case 2:
+	 	break;
 	}
-while (r==3){//inicio del ciclo while
-cout<<"Valor de a : ";
-cin>>a;
-cout<<"Valor de b : ";
-cin>>b;
-cout<<"Valor de c : ";
-cin>>c;
-  }
+ if(ecuacion(a,b,c)>=0)
+ {
+	cout<<"\n\nDeseas obtener el vertice? si=1, no=2 ";
+    cin>>rep;
+    
+	switch(rep){
+     	
+		 case 1:
+	 	 	float n4,n5,n6,x,y;
+	     	n4=(-b);
+	     	n5=(2*a);
+	     	x=n4/n5;
+	     	cout<<"\nLa primera solucion es : X=";cout<<x;
+	     	n6=a*x*x+b*x+c;
+	     	y=n6;
+	     	cout<<"\nLa primera solucion es : y=";cout<<y;	
+     		break;
+     
+	 case 2:
+	 	break;
+    }
+}
+}
+	while (r==3)
+	
+	{
+	
+		cout<<"Valor de a : ";
+		cin>>a;
+		cout<<"Valor de b : ";
+		cin>>b;
+		cout<<"Valor de c : ";
+		cin>>c;
+  	}
   
 
 int rep,r=3;
@@ -76,7 +115,10 @@ cout<<"\n\nVolver a calcular otros 2 numeros? si=1, no=2: ";
      return 0;
 			}
         }
-     cout<<"  \n";
+     cout<<"\nProceso terminado exitosamente \n";
 
 
 }
+
+
+
